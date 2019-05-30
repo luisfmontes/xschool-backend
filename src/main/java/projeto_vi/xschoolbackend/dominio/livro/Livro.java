@@ -53,11 +53,15 @@ public class Livro implements Serializable {
 
     @NotNull
     @Column(name = "favorito")
-    private Boolean favorito ;
+    private Boolean favorito;
 
     @NotNull
-    @Column(name = "user")
-    private String user;
+    @Column(name = "dono")
+    private String dono;
+
+    @NotNull
+    @Column(name = "imagemp")
+    private String imagemp;
 
     // GET & SET
     public long getId() {
@@ -132,11 +136,19 @@ public class Livro implements Serializable {
         this.favorito = favorito;
     }
 
-    public String getUser() {
-        return user;
+    public String getDono() {
+        return dono;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setDono(String dono) {
+        this.dono = dono;
+    }
+
+    public String getImagemp() {
+        return imagemp;
+    }
+
+    public void setImagemp(String imagemp) {
+        this.imagemp = imagemp;
     }
 }
