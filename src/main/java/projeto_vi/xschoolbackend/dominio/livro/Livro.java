@@ -42,9 +42,10 @@ public class Livro implements Serializable {
     @JoinColumn(name ="id_categoria", referencedColumnName = "id")
     private Categoria categoria;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name ="id_colecao", referencedColumnName = "id")
-    private Autor autor;
+    @NotNull
+    @Column(name = "autor")
+    private String autor;
+
 
     @NotNull
     @Column(name = "preco")
@@ -53,6 +54,10 @@ public class Livro implements Serializable {
     @NotNull
     @Column(name = "favorito")
     private Boolean favorito ;
+
+    @NotNull
+    @Column(name = "user")
+    private String user;
 
     // GET & SET
     public long getId() {
@@ -103,11 +108,11 @@ public class Livro implements Serializable {
         this.categoria = categoria;
     }
 
-    public Autor getAutor() {
+    public String getAutor() {
         return autor;
     }
 
-    public void setAutor(Autor autor) {
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 
@@ -125,5 +130,13 @@ public class Livro implements Serializable {
 
     public void setFavorito(Boolean favorito) {
         this.favorito = favorito;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }
