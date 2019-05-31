@@ -35,6 +35,10 @@ public class LivroServico {
         return livroRepositorio.getOne(livroId);
     }
 
+    public List<Livro> buscarPorCategoriaId(Long categoriaId){
+        return livroRepositorio.findByCategoria_Id(categoriaId);
+    }
+
     public List<Livro> buscarTodos(){
         return livroRepositorio.findAll();
     }

@@ -42,6 +42,12 @@ public class LivroControlador {
         return new ResponseEntity(livroServico.buscarPeloId(livroId), HttpStatus.OK);
     }
 
+    @GetMapping(value = "categoria/{categoriaId}")
+    public ResponseEntity<?> findLivrosByCategoriaId(@PathVariable Long categoriaId) {
+        return new ResponseEntity(livroServico.buscarPorCategoriaId(categoriaId), HttpStatus.OK);
+    }
+
+
 
 
 }

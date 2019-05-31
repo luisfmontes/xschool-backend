@@ -1,7 +1,6 @@
 package projeto_vi.xschoolbackend.dominio.livro;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import projeto_vi.xschoolbackend.dominio.autor.Autor;
 import projeto_vi.xschoolbackend.dominio.categoria.Categoria;
 
 
@@ -46,20 +45,19 @@ public class Livro implements Serializable {
     @Column(name = "autor")
     private String autor;
 
-
     @NotNull
     @Column(name = "preco")
     private long preco;
 
-    @NotNull
+//    @NotNull
     @Column(name = "favorito")
     private Boolean favorito;
 
-    @NotNull
+    //@NotNull
     @Column(name = "dono")
     private String dono;
 
-    @NotNull
+//    @NotNull
     @Column(name = "imagemp")
     private String imagemp;
 

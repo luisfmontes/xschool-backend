@@ -1,9 +1,6 @@
 package projeto_vi.xschoolbackend.dominio.favoritos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import projeto_vi.xschoolbackend.dominio.autor.Autor;
-import projeto_vi.xschoolbackend.dominio.categoria.Categoria;
-
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

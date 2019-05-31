@@ -42,5 +42,4 @@ public class CategoriaControlador {
     public ResponseEntity<?> findById(@PathVariable Long categoriaId) {
         return new ResponseEntity(categoriaServico.buscarPeloId(categoriaId), HttpStatus.OK);
     }
-
 }
